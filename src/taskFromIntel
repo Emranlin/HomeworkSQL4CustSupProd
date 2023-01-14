@@ -1,0 +1,153 @@
+
+select *
+from supplier;
+select *
+from product;
+select *
+from orders;
+select *
+from order_item;
+select *
+from customer;
+
+-- Вывести всех клиентов из страны Canada
+select first_name, last_name, city, phone
+from customer
+where country like 'Canada';
+select *, country
+from customer
+where customer.country like 'Canada';
+select country, count(*)
+from customer
+where country = 'Canada'
+group by country;
+-- Вывести все страны клиентов
+select country
+from customer
+group by country;
+select count(country)
+from customer;
+--Вывести количество всех заказов
+select count(total_amount)
+from orders;
+
+-- Вывести максимальную стоимость заказа
+select max(unit_price)
+from product;
+select product_name, max(unit_price)
+from product
+group by product_name;
+select *
+from product
+where product.unit_price > 200;
+select product.product_name
+from product
+where unit_price > 200
+group by product.product_name;
+select product.product_name, product.unit_price
+from product
+where product.unit_price > 200
+group by product.product_name, product.unit_price;
+select max(total_amount)
+from orders;
+select *
+from orders
+where total_amount = (select max(total_amount) from orders);
+select *
+from orders
+where total_amount < 17000;
+
+
+-- Найти сумму всех заказов
+select sum(unit_price) as total_amount
+from product;
+select sum(total_amount)
+from orders;
+
+-- Найти сумму всех заказов за 2014 год
+select sum(total_amount)
+from orders
+where order_date between 'jan-01-2012' and 'dec-31-2012';
+
+-- Найти среднюю стоимость всех заказов
+select avg(unit_price)
+from product;
+select avg(total_amount) as avg_sum
+from orders;
+
+-- Найти среднюю стоимость всех заказов по каждому клиенту
+select avg(total_amount)
+from orders;
+
+-- Найти всех клиентов, которые живут в Бразилии или Испании
+select *
+from customer
+where customer.country in ('Brazil', 'Spain');
+select *
+from customer
+where customer.country = 'Brazil '
+   or customer.country = 'Spain';
+select first_name
+from customer
+where customer.country in ('Brazil', 'Spain')
+group by first_name;
+
+-- Найти все заказы между 2013ым и 2014ым годами, которые стоили меньше 100.00$
+select total_amount
+from orders
+where orders.order_date between 'jan-01-2013' and 'jan-01-2014'
+group by total_amount
+having orders.total_amount < 100.00;
+
+-- Найти всех клиентов, которые в одной из стран: Испания, Италия, Германия, Франция. Отсортируйте по странам
+select *
+from customer
+where customer.country in ('Spain', 'Italy', 'Germany', 'France');
+select *
+from customer
+where customer.country in ('Spain', 'Italy', 'Germany', 'France')
+order by country;
+select *
+from customer
+where customer.country in ('Spain', 'Italy', 'Germany', 'France')
+order by country desc;
+-- Найти все страны клиентов, страны которых содержаться в таблице поставщиков
+select country
+from customer
+intersect
+select country
+from supplier;
+
+-- Найти всех клиентов, имена которых начинаются на ‘Jo’
+select *
+from customer
+where customer.first_name like 'Jo%';
+
+-- Найти всех клиентов, имена которых заканчиваются на ‘a’ и имеют длину ровно 4 символа
+select *
+from customer
+where customer.first_name like '%a _____';
+
+-- Найти количество клиентов по странам
+select country, count(country)
+from customer
+group by customer.country;
+
+-- Найти количество клиентов по странам. Вывести в порядке убывания
+select country, count(country)
+from customer
+group by country
+order by country desc;
+
+-- Найти общую сумму стоимости заказов и количество заказов по каждому клиенту (customer_id). Отсортировать по сумме
+select sum(total_amount), count(total_amount)
+from orders;
+-- Найти общую сумму стоимости заказов и количество заказов по каждому клиенту (customer_id), у которых общее количество заказов больше 20ти
+select sum(total_amount), count(total_amount)
+from orders
+where total_amount > 20;
+
+-- Найти количество городов в каждой из стран клиентов
+select city, count(city)
+from customer
+group by city;

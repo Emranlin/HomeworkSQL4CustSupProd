@@ -1,0 +1,825 @@
+Server [localhost]:
+Database [postgres]:
+Port [5432]:
+Username [postgres]: postgres
+Password for user postgres:
+psql (15.1)
+WARNING: Console code page (437) differs from Windows code page (1252)
+         8-bit characters might not work correctly. See psql reference
+         page "Notes for Windows users" for details.
+Type "help" for help.
+
+postgres=# select * from customer;
+ id | first_name |    last_name    |      city       |   country   |       phone
+----+------------+-----------------+-----------------+-------------+-------------------
+  1 | Maria      | Anders          | Berlin          | Germany     | 030-0074321
+  2 | Ana        | Trujillo        | MΘxico D.F.     | Mexico      | (5) 555-4729
+  3 | Antonio    | Moreno          | MΘxico D.F.     | Mexico      | (5) 555-3932
+  4 | Thomas     | Hardy           | London          | UK          | (171) 555-7788
+  5 | Christina  | Berglund        | Luleσ           | Sweden      | 0921-12 34 65
+  6 | Hanna      | Moos            | Mannheim        | Germany     | 0621-08460
+  7 | FrΘdΘrique | Citeaux         | Strasbourg      | France      | 88.60.15.31
+  8 | Martφn     | Sommer          | Madrid          | Spain       | (91) 555 22 82
+  9 | Laurence   | Lebihan         | Marseille       | France      | 91.24.45.40
+ 10 | Elizabeth  | Lincoln         | Tsawassen       | Canada      | (604) 555-4729
+ 11 | Victoria   | Ashworth        | London          | UK          | (171) 555-1212
+ 12 | Patricio   | Simpson         | Buenos Aires    | Argentina   | (1) 135-5555
+ 13 | Francisco  | Chang           | MΘxico D.F.     | Mexico      | (5) 555-3392
+ 14 | Yang       | Wang            | Bern            | Switzerland | 0452-076545
+ 15 | Pedro      | Afonso          | Sao Paulo       | Brazil      | (11) 555-7647
+ 16 | Elizabeth  | Brown           | London          | UK          | (171) 555-2282
+ 17 | Sven       | Ottlieb         | Aachen          | Germany     | 0241-039123
+ 18 | Janine     | Labrune         | Nantes          | France      | 40.67.88.88
+ 19 | Ann        | Devon           | London          | UK          | (171) 555-0297
+ 20 | Roland     | Mendel          | Graz            | Austria     | 7675-3425
+ 21 | Aria       | Cruz            | Sao Paulo       | Brazil      | (11) 555-9857
+ 22 | Diego      | Roel            | Madrid          | Spain       | (91) 555 94 44
+ 23 | Martine    | RancΘ           | Lille           | France      | 20.16.10.16
+ 24 | Maria      | Larsson         | BrΣcke          | Sweden      | 0695-34 67 21
+ 25 | Peter      | Franken         | Mⁿnchen         | Germany     | 089-0877310
+ 26 | Carine     | Schmitt         | Nantes          | France      | 40.32.21.21
+ 27 | Paolo      | Accorti         | Torino          | Italy       | 011-4988260
+ 28 | Lino       | Rodriguez       | Lisboa          | Portugal    | (1) 354-2534
+ 29 | Eduardo    | Saavedra        | Barcelona       | Spain       | (93) 203 4560
+ 30 | JosΘ       | Pedro Freyre    | Sevilla         | Spain       | (95) 555 82 82
+ 31 | AndrΘ      | Fonseca         | Campinas        | Brazil      | (11) 555-9482
+ 32 | Howard     | Snyder          | Eugene          | USA         | (503) 555-7555
+ 33 | Manuel     | Pereira         | Caracas         | Venezuela   | (2) 283-2951
+ 34 | Mario      | Pontes          | Rio de Janeiro  | Brazil      | (21) 555-0091
+ 35 | Carlos     | Hernßndez       | San Crist≤bal   | Venezuela   | (5) 555-1340
+ 36 | Yoshi      | Latimer         | Elgin           | USA         | (503) 555-6874
+ 37 | Patricia   | McKenna         | Cork            | Ireland     | 2967 542
+ 38 | Helen      | Bennett         | Cowes           | UK          | (198) 555-8888
+ 39 | Philip     | Cramer          | Brandenburg     | Germany     | 0555-09876
+ 40 | Daniel     | Tonini          | Versailles      | France      | 30.59.84.10
+ 41 | Annette    | Roulet          | Toulouse        | France      | 61.77.61.10
+ 42 | Yoshi      | Tannamuri       | Vancouver       | Canada      | (604) 555-3392
+ 43 | John       | Steel           | Walla Walla     | USA         | (509) 555-7969
+ 44 | Renate     | Messner         | Frankfurt a.M.  | Germany     | 069-0245984
+ 45 | Jaime      | Yorres          | San Francisco   | USA         | (415) 555-5938
+ 46 | Carlos     | Gonzßlez        | Barquisimeto    | Venezuela   | (9) 331-6954
+ 47 | Felipe     | Izquierdo       | I. de Margarita | Venezuela   | (8) 34-56-12
+ 48 | Fran       | Wilson          | Portland        | USA         | (503) 555-9573
+ 49 | Giovanni   | Rovelli         | Bergamo         | Italy       | 035-640230
+ 50 | Catherine  | Dewey           | Bruxelles       | Belgium     | (02) 201 24 67
+ 51 | Jean       | FresniΦre       | MontrΘal        | Canada      | (514) 555-8054
+ 52 | Alexander  | Feuer           | Leipzig         | Germany     | 0342-023176
+ 53 | Simon      | Crowther        | London          | UK          | (171) 555-7733
+ 54 | Yvonne     | Moncada         | Buenos Aires    | Argentina   | (1) 135-5333
+ 55 | Rene       | Phillips        | Anchorage       | USA         | (907) 555-7584
+ 56 | Henriette  | Pfalzheim       | K÷ln            | Germany     | 0221-0644327
+ 57 | Marie      | Bertrand        | Paris           | France      | (1) 42.34.22.66
+ 58 | Guillermo  | Fernßndez       | MΘxico D.F.     | Mexico      | (5) 552-3745
+ 59 | Georg      | Pipps           | Salzburg        | Austria     | 6562-9722
+ 60 | Isabel     | de Castro       | Lisboa          | Portugal    | (1) 356-5634
+ 61 | Bernardo   | Batista         | Rio de Janeiro  | Brazil      | (21) 555-4252
+ 62 | L·cia      | Carvalho        | Sao Paulo       | Brazil      | (11) 555-1189
+ 63 | Horst      | Kloss           | Cunewalde       | Germany     | 0372-035188
+ 64 | Sergio     | GutiΘrrez       | Buenos Aires    | Argentina   | (1) 123-5555
+ 65 | Paula      | Wilson          | Albuquerque     | USA         | (505) 555-5939
+ 66 | Maurizio   | Moroni          | Reggio Emilia   | Italy       | 0522-556721
+ 67 | Janete     | Limeira         | Rio de Janeiro  | Brazil      | (21) 555-3412
+ 68 | Michael    | Holz            | GenΦve          | Switzerland | 0897-034214
+ 69 | Alejandra  | Camino          | Madrid          | Spain       | (91) 745 6200
+ 70 | Jonas      | Bergulfsen      | Stavern         | Norway      | 07-98 92 35
+ 71 | Jose       | Pavarotti       | Boise           | USA         | (208) 555-8097
+ 72 | Hari       | Kumar           | London          | UK          | (171) 555-1717
+ 73 | Jytte      | Petersen        | Kobenhavn       | Denmark     | 31 12 34 56
+ 74 | Dominique  | Perrier         | Paris           | France      | (1) 47.55.60.10
+ 75 | Art        | Braunschweiger  | Lander          | USA         | (307) 555-4680
+ 76 | Pascale    | Cartrain        | Charleroi       | Belgium     | (071) 23 67 22 20
+ 77 | Liz        | Nixon           | Portland        | USA         | (503) 555-3612
+ 78 | Liu        | Wong            | Butte           | USA         | (406) 555-5834
+ 79 | Karin      | Josephs         | Mⁿnster         | Germany     | 0251-031259
+ 80 | Miguel     | Angel Paolino   | MΘxico D.F.     | Mexico      | (5) 555-2933
+ 81 | Anabela    | Domingues       | Sao Paulo       | Brazil      | (11) 555-2167
+ 82 | Helvetius  | Nagy            | Kirkland        | USA         | (206) 555-8257
+ 83 | Palle      | Ibsen           | ┼rhus           | Denmark     | 86 21 32 43
+ 84 | Mary       | Saveley         | Lyon            | France      | 78.32.54.86
+ 85 | Paul       | Henriot         | Reims           | France      | 26.47.15.10
+ 86 | Rita       | Mⁿller          | Stuttgart       | Germany     | 0711-020361
+ 87 | Pirkko     | Koskitalo       | Oulu            | Finland     | 981-443655
+ 88 | Paula      | Parente         | Resende         | Brazil      | (14) 555-8122
+ 89 | Karl       | Jablonski       | Seattle         | USA         | (206) 555-4112
+ 90 | Matti      | Karttunen       | Helsinki        | Finland     | 90-224 8858
+ 91 | Zbyszek    | Piestrzeniewicz | Warszawa        | Poland      | (26) 642-7012
+(91 rows)
+
+
+postgres=# select country from customer where country like 'Canada' group by country;
+ country
+---------
+ Canada
+(1 row)
+
+
+postgres=# select *,country from customer where country like 'Canada' group by country;
+ERROR:  column "customer.id" must appear in the GROUP BY clause or be used in an aggregate function
+LINE 1: select *,country from customer where country like 'Canada' g...
+               ^
+postgres=# select * , country from customer where country like 'Canada';
+ id | first_name | last_name |   city    | country |     phone      | country
+----+------------+-----------+-----------+---------+----------------+---------
+ 10 | Elizabeth  | Lincoln   | Tsawassen | Canada  | (604) 555-4729 | Canada
+ 42 | Yoshi      | Tannamuri | Vancouver | Canada  | (604) 555-3392 | Canada
+ 51 | Jean       | FresniΦre | MontrΘal  | Canada  | (514) 555-8054 | Canada
+(3 rows)
+
+
+postgres=# select country from customer group by country;
+   country
+-------------
+ Argentina
+ Spain
+ Switzerland
+ Italy
+ Venezuela
+ Belgium
+ Norway
+ Sweden
+ USA
+ France
+ Mexico
+ Brazil
+ Austria
+ Poland
+ UK
+ Ireland
+ Germany
+ Denmark
+ Canada
+ Finland
+ Portugal
+(21 rows)
+
+
+postgres=# select count(orders)from orders;
+ count
+-------
+   830
+(1 row)
+
+
+postgres=# select * from orders where total_amount=(select max(total_amount)from orders);
+ id  |     order_date      | order_number | total_amount | customer_id
+-----+---------------------+--------------+--------------+-------------
+ 618 | 2014-02-02 00:00:00 | 542995       |     17250.00 |          63
+(1 row)
+
+
+postgres=# select sum(total_amount) from orders;
+    sum
+------------
+ 1354458.59
+(1 row)
+
+
+postgres=# select sum(total_amount) from orders where order_date between 'jan-01-2012' and 'dec-31-2012' group by order_date;
+   sum
+----------
+  1397.20
+  2545.20
+   468.00
+   240.40
+  1242.00
+  1444.80
+  1832.80
+  3730.00
+  1762.00
+  1106.40
+  1765.60
+  2167.00
+   452.00
+   982.00
+   848.70
+  2736.00
+  1440.00
+   970.20
+    88.80
+  2464.80
+  1050.60
+   164.40
+   307.20
+  2924.80
+  4031.00
+   516.80
+  1200.80
+   288.00
+   959.20
+   954.00
+   625.20
+  3127.00
+   538.60
+  1274.00
+  1887.60
+   155.40
+  4157.00
+    89.00
+  1176.00
+   144.80
+  2333.20
+  2361.60
+   954.40
+   440.00
+  2467.00
+  1414.80
+   141.60
+  1168.00
+   724.50
+  1488.80
+  1586.00
+  1363.00
+  1436.00
+   604.80
+   103.20
+  6155.90
+   424.00
+   349.50
+  1531.80
+  2028.50
+  2835.00
+  2233.60
+  1224.40
+   479.40
+  1424.00
+  1296.00
+   924.00
+  1452.00
+   364.80
+  2708.80
+  1863.40
+ 10741.60
+ 12281.20
+  2747.00
+  2976.40
+   934.50
+  4819.40
+  2018.60
+  1834.20
+   154.00
+  6391.00
+  3121.40
+  2483.80
+   928.00
+   624.80
+  2194.20
+  1456.00
+  9663.80
+  1191.20
+  2300.80
+  2142.40
+  1549.60
+  1360.00
+  2327.00
+  1119.90
+  3744.60
+   121.60
+  1265.20
+   676.00
+   660.00
+  2900.00
+  1420.00
+  1614.80
+   699.70
+   112.00
+  2490.50
+  3654.40
+  3016.00
+  2262.50
+  1101.20
+   396.00
+  3463.20
+   316.80
+  1497.00
+   864.00
+   498.50
+   420.00
+   403.20
+  2527.20
+  2856.00
+   100.80
+  2721.80
+   338.00
+  1731.20
+   480.00
+   568.80
+   182.40
+   517.80
+  2179.20
+(129 rows)
+
+
+postgres=#
+postgres=# select sum(total_amount)from orders where like order_date between 'jan-01-2014' and 'dec-31-2014';p
+ERROR:  syntax error at or near "order_date"
+LINE 1: select sum(total_amount)from orders where like order_date be...
+                                                       ^
+postgres-# select sum(total_amount) from orders where oerder_date between'jan-01-2014' and'dec-31-2014';
+ERROR:  syntax error at or near "p"
+LINE 1: p
+        ^
+postgres=# select sum(total_amount) from orders where order_date between'jan-01-2014' and'dec-31-2014';
+    sum
+-----------
+ 469771.34
+(1 row)
+
+
+postgres=# select avg(sum(total_amount)) from orders;
+ERROR:  aggregate function calls cannot be nested
+LINE 1: select avg(sum(total_amount)) from orders;
+                   ^
+postgres=# select avg(total_amount) from orders;
+          avg
+-----------------------
+ 1631.8778192771084337
+(1 row)
+
+
+postgres=# select * from customers where country in('Brazil','Spain');
+ERROR:  column "country" does not exist
+LINE 1: select * from customers where country in('Brazil','Spain');
+                                      ^
+postgres=# select country from customers where country in('Brazil','Spain');
+ERROR:  column "country" does not exist
+LINE 1: select country from customers where country in('Brazil','Spa...
+               ^
+postgres=# select country from customers where country in('Brazil','Spain') group by country;
+ERROR:  column "country" does not exist
+LINE 1: select country from customers where country in('Brazil','Spa...
+               ^
+postgres=# select * from customer;
+ id | first_name |    last_name    |      city       |   country   |       phone
+----+------------+-----------------+-----------------+-------------+-------------------
+  1 | Maria      | Anders          | Berlin          | Germany     | 030-0074321
+  2 | Ana        | Trujillo        | MΘxico D.F.     | Mexico      | (5) 555-4729
+  3 | Antonio    | Moreno          | MΘxico D.F.     | Mexico      | (5) 555-3932
+  4 | Thomas     | Hardy           | London          | UK          | (171) 555-7788
+  5 | Christina  | Berglund        | Luleσ           | Sweden      | 0921-12 34 65
+  6 | Hanna      | Moos            | Mannheim        | Germany     | 0621-08460
+  7 | FrΘdΘrique | Citeaux         | Strasbourg      | France      | 88.60.15.31
+  8 | Martφn     | Sommer          | Madrid          | Spain       | (91) 555 22 82
+  9 | Laurence   | Lebihan         | Marseille       | France      | 91.24.45.40
+ 10 | Elizabeth  | Lincoln         | Tsawassen       | Canada      | (604) 555-4729
+ 11 | Victoria   | Ashworth        | London          | UK          | (171) 555-1212
+ 12 | Patricio   | Simpson         | Buenos Aires    | Argentina   | (1) 135-5555
+ 13 | Francisco  | Chang           | MΘxico D.F.     | Mexico      | (5) 555-3392
+ 14 | Yang       | Wang            | Bern            | Switzerland | 0452-076545
+ 15 | Pedro      | Afonso          | Sao Paulo       | Brazil      | (11) 555-7647
+ 16 | Elizabeth  | Brown           | London          | UK          | (171) 555-2282
+ 17 | Sven       | Ottlieb         | Aachen          | Germany     | 0241-039123
+ 18 | Janine     | Labrune         | Nantes          | France      | 40.67.88.88
+ 19 | Ann        | Devon           | London          | UK          | (171) 555-0297
+ 20 | Roland     | Mendel          | Graz            | Austria     | 7675-3425
+ 21 | Aria       | Cruz            | Sao Paulo       | Brazil      | (11) 555-9857
+ 22 | Diego      | Roel            | Madrid          | Spain       | (91) 555 94 44
+ 23 | Martine    | RancΘ           | Lille           | France      | 20.16.10.16
+ 24 | Maria      | Larsson         | BrΣcke          | Sweden      | 0695-34 67 21
+ 25 | Peter      | Franken         | Mⁿnchen         | Germany     | 089-0877310
+ 26 | Carine     | Schmitt         | Nantes          | France      | 40.32.21.21
+ 27 | Paolo      | Accorti         | Torino          | Italy       | 011-4988260
+ 28 | Lino       | Rodriguez       | Lisboa          | Portugal    | (1) 354-2534
+ 29 | Eduardo    | Saavedra        | Barcelona       | Spain       | (93) 203 4560
+ 30 | JosΘ       | Pedro Freyre    | Sevilla         | Spain       | (95) 555 82 82
+ 31 | AndrΘ      | Fonseca         | Campinas        | Brazil      | (11) 555-9482
+ 32 | Howard     | Snyder          | Eugene          | USA         | (503) 555-7555
+ 33 | Manuel     | Pereira         | Caracas         | Venezuela   | (2) 283-2951
+ 34 | Mario      | Pontes          | Rio de Janeiro  | Brazil      | (21) 555-0091
+ 35 | Carlos     | Hernßndez       | San Crist≤bal   | Venezuela   | (5) 555-1340
+ 36 | Yoshi      | Latimer         | Elgin           | USA         | (503) 555-6874
+ 37 | Patricia   | McKenna         | Cork            | Ireland     | 2967 542
+ 38 | Helen      | Bennett         | Cowes           | UK          | (198) 555-8888
+ 39 | Philip     | Cramer          | Brandenburg     | Germany     | 0555-09876
+ 40 | Daniel     | Tonini          | Versailles      | France      | 30.59.84.10
+ 41 | Annette    | Roulet          | Toulouse        | France      | 61.77.61.10
+ 42 | Yoshi      | Tannamuri       | Vancouver       | Canada      | (604) 555-3392
+ 43 | John       | Steel           | Walla Walla     | USA         | (509) 555-7969
+ 44 | Renate     | Messner         | Frankfurt a.M.  | Germany     | 069-0245984
+ 45 | Jaime      | Yorres          | San Francisco   | USA         | (415) 555-5938
+ 46 | Carlos     | Gonzßlez        | Barquisimeto    | Venezuela   | (9) 331-6954
+ 47 | Felipe     | Izquierdo       | I. de Margarita | Venezuela   | (8) 34-56-12
+ 48 | Fran       | Wilson          | Portland        | USA         | (503) 555-9573
+ 49 | Giovanni   | Rovelli         | Bergamo         | Italy       | 035-640230
+ 50 | Catherine  | Dewey           | Bruxelles       | Belgium     | (02) 201 24 67
+ 51 | Jean       | FresniΦre       | MontrΘal        | Canada      | (514) 555-8054
+ 52 | Alexander  | Feuer           | Leipzig         | Germany     | 0342-023176
+ 53 | Simon      | Crowther        | London          | UK          | (171) 555-7733
+ 54 | Yvonne     | Moncada         | Buenos Aires    | Argentina   | (1) 135-5333
+ 55 | Rene       | Phillips        | Anchorage       | USA         | (907) 555-7584
+ 56 | Henriette  | Pfalzheim       | K÷ln            | Germany     | 0221-0644327
+ 57 | Marie      | Bertrand        | Paris           | France      | (1) 42.34.22.66
+ 58 | Guillermo  | Fernßndez       | MΘxico D.F.     | Mexico      | (5) 552-3745
+ 59 | Georg      | Pipps           | Salzburg        | Austria     | 6562-9722
+ 60 | Isabel     | de Castro       | Lisboa          | Portugal    | (1) 356-5634
+ 61 | Bernardo   | Batista         | Rio de Janeiro  | Brazil      | (21) 555-4252
+ 62 | L·cia      | Carvalho        | Sao Paulo       | Brazil      | (11) 555-1189
+ 63 | Horst      | Kloss           | Cunewalde       | Germany     | 0372-035188
+ 64 | Sergio     | GutiΘrrez       | Buenos Aires    | Argentina   | (1) 123-5555
+ 65 | Paula      | Wilson          | Albuquerque     | USA         | (505) 555-5939
+ 66 | Maurizio   | Moroni          | Reggio Emilia   | Italy       | 0522-556721
+ 67 | Janete     | Limeira         | Rio de Janeiro  | Brazil      | (21) 555-3412
+ 68 | Michael    | Holz            | GenΦve          | Switzerland | 0897-034214
+ 69 | Alejandra  | Camino          | Madrid          | Spain       | (91) 745 6200
+ 70 | Jonas      | Bergulfsen      | Stavern         | Norway      | 07-98 92 35
+ 71 | Jose       | Pavarotti       | Boise           | USA         | (208) 555-8097
+ 72 | Hari       | Kumar           | London          | UK          | (171) 555-1717
+ 73 | Jytte      | Petersen        | Kobenhavn       | Denmark     | 31 12 34 56
+ 74 | Dominique  | Perrier         | Paris           | France      | (1) 47.55.60.10
+ 75 | Art        | Braunschweiger  | Lander          | USA         | (307) 555-4680
+ 76 | Pascale    | Cartrain        | Charleroi       | Belgium     | (071) 23 67 22 20
+ 77 | Liz        | Nixon           | Portland        | USA         | (503) 555-3612
+ 78 | Liu        | Wong            | Butte           | USA         | (406) 555-5834
+ 79 | Karin      | Josephs         | Mⁿnster         | Germany     | 0251-031259
+ 80 | Miguel     | Angel Paolino   | MΘxico D.F.     | Mexico      | (5) 555-2933
+ 81 | Anabela    | Domingues       | Sao Paulo       | Brazil      | (11) 555-2167
+ 82 | Helvetius  | Nagy            | Kirkland        | USA         | (206) 555-8257
+ 83 | Palle      | Ibsen           | ┼rhus           | Denmark     | 86 21 32 43
+ 84 | Mary       | Saveley         | Lyon            | France      | 78.32.54.86
+ 85 | Paul       | Henriot         | Reims           | France      | 26.47.15.10
+ 86 | Rita       | Mⁿller          | Stuttgart       | Germany     | 0711-020361
+ 87 | Pirkko     | Koskitalo       | Oulu            | Finland     | 981-443655
+ 88 | Paula      | Parente         | Resende         | Brazil      | (14) 555-8122
+ 89 | Karl       | Jablonski       | Seattle         | USA         | (206) 555-4112
+ 90 | Matti      | Karttunen       | Helsinki        | Finland     | 90-224 8858
+ 91 | Zbyszek    | Piestrzeniewicz | Warszawa        | Poland      | (26) 642-7012
+(91 rows)
+
+
+postgres=#
+postgres=# select first_name from customer where country like in('Brazil','Spain') group by first_name;
+ERROR:  syntax error at or near "in"
+LINE 1: ...elect first_name from customer where country like in('Brazil...
+                                                             ^
+postgres=# select * from customer where customer.country in ('Brazil','Spain');
+ id | first_name |  last_name   |      city      | country |     phone
+----+------------+--------------+----------------+---------+----------------
+  8 | Martφn     | Sommer       | Madrid         | Spain   | (91) 555 22 82
+ 15 | Pedro      | Afonso       | Sao Paulo      | Brazil  | (11) 555-7647
+ 21 | Aria       | Cruz         | Sao Paulo      | Brazil  | (11) 555-9857
+ 22 | Diego      | Roel         | Madrid         | Spain   | (91) 555 94 44
+ 29 | Eduardo    | Saavedra     | Barcelona      | Spain   | (93) 203 4560
+ 30 | JosΘ       | Pedro Freyre | Sevilla        | Spain   | (95) 555 82 82
+ 31 | AndrΘ      | Fonseca      | Campinas       | Brazil  | (11) 555-9482
+ 34 | Mario      | Pontes       | Rio de Janeiro | Brazil  | (21) 555-0091
+ 61 | Bernardo   | Batista      | Rio de Janeiro | Brazil  | (21) 555-4252
+ 62 | L·cia      | Carvalho     | Sao Paulo      | Brazil  | (11) 555-1189
+ 67 | Janete     | Limeira      | Rio de Janeiro | Brazil  | (21) 555-3412
+ 69 | Alejandra  | Camino       | Madrid         | Spain   | (91) 745 6200
+ 81 | Anabela    | Domingues    | Sao Paulo      | Brazil  | (11) 555-2167
+ 88 | Paula      | Parente      | Resende        | Brazil  | (14) 555-8122
+(14 rows)
+
+
+postgres=# select total_amount from where orders.order_date between 'jan-01-2013' and 'jan-01-2014' group by total_amount having total_amount>100.00;
+ERROR:  syntax error at or near "where"
+LINE 1: select total_amount from where orders.order_date between 'ja...
+                                 ^
+postgres=# select total_amount from orders where orders.order_date
+postgres-# between 'jan-01-2013' and 'jan-01-2014'group by total_amount having orders.total_amount<100.00;
+ total_amount
+--------------
+        72.00
+        28.00
+        57.50
+        88.00
+        93.50
+        55.20
+        12.50
+        18.40
+        96.50
+        63.00
+        62.00
+        65.00
+        52.35
+        45.00
+        49.80
+(15 rows)
+
+
+postgres=# select total_amount from orders where orders.order_date between 'jan-01-2013' and 'jan-01-2014'group by total_amount having orders.total_amount<100.00;
+ total_amount
+--------------
+        72.00
+        28.00
+        57.50
+        88.00
+        93.50
+        55.20
+        12.50
+        18.40
+        96.50
+        63.00
+        62.00
+        65.00
+        52.35
+        45.00
+        49.80
+(15 rows)
+
+
+postgres=# select * from orders where orders.country in('Spain','Italy','France','Germany');
+ERROR:  column orders.country does not exist
+LINE 1: select * from orders where orders.country in('Spain','Italy'...
+                                   ^
+postgres=# select orders.country from orders where orders.country in('Spain','Italy','France','Italy') group by orders.country;
+ERROR:  column orders.country does not exist
+LINE 1: select orders.country from orders where orders.country in('S...
+               ^
+postgres=# select * from orders where orders.country in('Spain','Italy','France','Germany') order by country;
+ERROR:  column orders.country does not exist
+LINE 1: select * from orders where orders.country in('Spain','Italy'...
+                                   ^
+postgres=# select * from customer where customer in('Spain','Italy','France','Germany')order by country;
+ERROR:  malformed record literal: "Spain"
+LINE 1: select * from customer where customer in('Spain','Italy','Fr...
+                                                 ^
+DETAIL:  Missing left parenthesis.
+postgres=# select * from customer where customer.country in('Spain','Italy','France','Germany')order by country;
+ id | first_name |  last_name   |      city      | country |      phone
+----+------------+--------------+----------------+---------+-----------------
+ 74 | Dominique  | Perrier      | Paris          | France  | (1) 47.55.60.10
+ 57 | Marie      | Bertrand     | Paris          | France  | (1) 42.34.22.66
+ 41 | Annette    | Roulet       | Toulouse       | France  | 61.77.61.10
+  9 | Laurence   | Lebihan      | Marseille      | France  | 91.24.45.40
+ 40 | Daniel     | Tonini       | Versailles     | France  | 30.59.84.10
+  7 | FrΘdΘrique | Citeaux      | Strasbourg     | France  | 88.60.15.31
+ 18 | Janine     | Labrune      | Nantes         | France  | 40.67.88.88
+ 84 | Mary       | Saveley      | Lyon           | France  | 78.32.54.86
+ 23 | Martine    | RancΘ        | Lille          | France  | 20.16.10.16
+ 85 | Paul       | Henriot      | Reims          | France  | 26.47.15.10
+ 26 | Carine     | Schmitt      | Nantes         | France  | 40.32.21.21
+ 86 | Rita       | Mⁿller       | Stuttgart      | Germany | 0711-020361
+  6 | Hanna      | Moos         | Mannheim       | Germany | 0621-08460
+ 17 | Sven       | Ottlieb      | Aachen         | Germany | 0241-039123
+ 25 | Peter      | Franken      | Mⁿnchen        | Germany | 089-0877310
+ 39 | Philip     | Cramer       | Brandenburg    | Germany | 0555-09876
+ 44 | Renate     | Messner      | Frankfurt a.M. | Germany | 069-0245984
+ 52 | Alexander  | Feuer        | Leipzig        | Germany | 0342-023176
+ 56 | Henriette  | Pfalzheim    | K÷ln           | Germany | 0221-0644327
+ 63 | Horst      | Kloss        | Cunewalde      | Germany | 0372-035188
+ 79 | Karin      | Josephs      | Mⁿnster        | Germany | 0251-031259
+  1 | Maria      | Anders       | Berlin         | Germany | 030-0074321
+ 27 | Paolo      | Accorti      | Torino         | Italy   | 011-4988260
+ 66 | Maurizio   | Moroni       | Reggio Emilia  | Italy   | 0522-556721
+ 49 | Giovanni   | Rovelli      | Bergamo        | Italy   | 035-640230
+  8 | Martφn     | Sommer       | Madrid         | Spain   | (91) 555 22 82
+ 22 | Diego      | Roel         | Madrid         | Spain   | (91) 555 94 44
+ 29 | Eduardo    | Saavedra     | Barcelona      | Spain   | (93) 203 4560
+ 30 | JosΘ       | Pedro Freyre | Sevilla        | Spain   | (95) 555 82 82
+ 69 | Alejandra  | Camino       | Madrid         | Spain   | (91) 745 6200
+(30 rows)
+
+
+postgres=# select * from customer where country in('Spain','Italy','France','Germany') order by country desc;
+ id | first_name |  last_name   |      city      | country |      phone
+----+------------+--------------+----------------+---------+-----------------
+ 30 | JosΘ       | Pedro Freyre | Sevilla        | Spain   | (95) 555 82 82
+  8 | Martφn     | Sommer       | Madrid         | Spain   | (91) 555 22 82
+ 29 | Eduardo    | Saavedra     | Barcelona      | Spain   | (93) 203 4560
+ 69 | Alejandra  | Camino       | Madrid         | Spain   | (91) 745 6200
+ 22 | Diego      | Roel         | Madrid         | Spain   | (91) 555 94 44
+ 49 | Giovanni   | Rovelli      | Bergamo        | Italy   | 035-640230
+ 27 | Paolo      | Accorti      | Torino         | Italy   | 011-4988260
+ 66 | Maurizio   | Moroni       | Reggio Emilia  | Italy   | 0522-556721
+  1 | Maria      | Anders       | Berlin         | Germany | 030-0074321
+  6 | Hanna      | Moos         | Mannheim       | Germany | 0621-08460
+ 17 | Sven       | Ottlieb      | Aachen         | Germany | 0241-039123
+ 25 | Peter      | Franken      | Mⁿnchen        | Germany | 089-0877310
+ 39 | Philip     | Cramer       | Brandenburg    | Germany | 0555-09876
+ 44 | Renate     | Messner      | Frankfurt a.M. | Germany | 069-0245984
+ 52 | Alexander  | Feuer        | Leipzig        | Germany | 0342-023176
+ 56 | Henriette  | Pfalzheim    | K÷ln           | Germany | 0221-0644327
+ 63 | Horst      | Kloss        | Cunewalde      | Germany | 0372-035188
+ 79 | Karin      | Josephs      | Mⁿnster        | Germany | 0251-031259
+ 86 | Rita       | Mⁿller       | Stuttgart      | Germany | 0711-020361
+ 74 | Dominique  | Perrier      | Paris          | France  | (1) 47.55.60.10
+ 85 | Paul       | Henriot      | Reims          | France  | 26.47.15.10
+ 57 | Marie      | Bertrand     | Paris          | France  | (1) 42.34.22.66
+ 84 | Mary       | Saveley      | Lyon           | France  | 78.32.54.86
+ 26 | Carine     | Schmitt      | Nantes         | France  | 40.32.21.21
+ 23 | Martine    | RancΘ        | Lille          | France  | 20.16.10.16
+  9 | Laurence   | Lebihan      | Marseille      | France  | 91.24.45.40
+ 40 | Daniel     | Tonini       | Versailles     | France  | 30.59.84.10
+ 41 | Annette    | Roulet       | Toulouse       | France  | 61.77.61.10
+  7 | FrΘdΘrique | Citeaux      | Strasbourg     | France  | 88.60.15.31
+ 18 | Janine     | Labrune      | Nantes         | France  | 40.67.88.88
+(30 rows)
+
+
+postgres=#
+postgres=#
+postgres=# select country orders intersect select country supplier;
+ERROR:  column "country" does not exist
+LINE 1: select country orders intersect select country supplier;
+               ^
+postgres=# select * from supplier;
+ id |              company_name              |        contact_name        | contact_title |     city      |   country   |      phone      |       fax
+----+----------------------------------------+----------------------------+---------------+---------------+-------------+-----------------+-----------------
+  1 | Exotic Liquids                         | Charlotte Cooper           |               | London        | UK          | (171) 555-2222  |
+  2 | New Orleans Cajun Delights             | Shelley Burke              |               | New Orleans   | USA         | (100) 555-4822  |
+  3 | Grandma Kelly's Homestead              | Regina Murphy              |               | Ann Arbor     | USA         | (313) 555-5735  | (313) 555-3349
+  4 | Tokyo Traders                          | Yoshi Nagase               |               | Tokyo         | Japan       | (03) 3555-5011  |
+  5 | Cooperativa de Quesos 'Las Cabras'     | Antonio del Valle Saavedra |               | Oviedo        | Spain       | (98) 598 76 54  |
+  6 | Mayumi's                               | Mayumi Ohno                |               | Osaka         | Japan       | (06) 431-7877   |
+  7 | Pavlova, Ltd.                          | Ian Devling                |               | Melbourne     | Australia   | (03) 444-2343   | (03) 444-6588
+  8 | Specialty Biscuits, Ltd.               | Peter Wilson               |               | Manchester    | UK          | (161) 555-4448  |
+  9 | PB KnΣckebr÷d AB                       | Lars Peterson              |               | G÷teborg      | Sweden      | 031-987 65 43   | 031-987 65 91
+ 10 | Refrescos Americanas LTDA              | Carlos Diaz                |               | Sao Paulo     | Brazil      | (11) 555 4640   |
+ 11 | Heli Sⁿ▀waren GmbH & Co. KG            | Petra Winkler              |               | Berlin        | Germany     | (010) 9984510   |
+ 12 | Plutzer Lebensmittelgro▀mΣrkte AG      | Martin Bein                |               | Frankfurt     | Germany     | (069) 992755    |
+ 13 | Nord-Ost-Fisch Handelsgesellschaft mbH | Sven Petersen              |               | Cuxhaven      | Germany     | (04721) 8713    | (04721) 8714
+ 14 | Formaggi Fortini s.r.l.                | Elio Rossi                 |               | Ravenna       | Italy       | (0544) 60323    | (0544) 60603
+ 15 | Norske Meierier                        | Beate Vileid               |               | Sandvika      | Norway      | (0)2-953010     |
+ 16 | Bigfoot Breweries                      | Cheryl Saylor              |               | Bend          | USA         | (503) 555-9931  |
+ 17 | Svensk Sj÷f÷da AB                      | Michael Bj÷rn              |               | Stockholm     | Sweden      | 08-123 45 67    |
+ 18 | Aux joyeux ecclΘsiastiques             | GuylΦne Nodier             |               | Paris         | France      | (1) 03.83.00.68 | (1) 03.83.00.62
+ 19 | New England Seafood Cannery            | Robb Merchant              |               | Boston        | USA         | (617) 555-3267  | (617) 555-3389
+ 20 | Leka Trading                           | Chandra Leka               |               | Singapore     | Singapore   | 555-8787        |
+ 21 | Lyngbysild                             | Niels Petersen             |               | Lyngby        | Denmark     | 43844108        | 43844115
+ 22 | Zaanse Snoepfabriek                    | Dirk Luchte                |               | Zaandam       | Netherlands | (12345) 1212    | (12345) 1210
+ 23 | Karkki Oy                              | Anne Heikkonen             |               | Lappeenranta  | Finland     | (953) 10956     |
+ 24 | G'day, Mate                            | Wendy Mackenzie            |               | Sydney        | Australia   | (02) 555-5914   | (02) 555-4873
+ 25 | Ma Maison                              | Jean-Guy Lauzon            |               | MontrΘal      | Canada      | (514) 555-9022  |
+ 26 | Pasta Buttini s.r.l.                   | Giovanni Giudici           |               | Salerno       | Italy       | (089) 6547665   | (089) 6547667
+ 27 | Escargots Nouveaux                     | Marie Delamare             |               | Montceau      | France      | 85.57.00.07     |
+ 28 | Gai pΓturage                           | Eliane Noz                 |               | Annecy        | France      | 38.76.98.06     | 38.76.98.58
+ 29 | ForΩts d'Θrables                       | Chantal Goulet             |               | Ste-Hyacinthe | Canada      | (514) 555-2955  | (514) 555-2921
+(29 rows)
+
+
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=#
+postgres=# select country orders intersect select country supplier;
+ERROR:  column "country" does not exist
+LINE 1: select country orders intersect select country supplier;
+               ^
+postgres=# select country customer intersect select country supplier;
+ERROR:  column "country" does not exist
+LINE 1: select country customer intersect select country supplier;
+               ^
+postgres=# select country from customer intersect select country from supplier;
+ country
+---------
+ Spain
+ Italy
+ Norway
+ Sweden
+ USA
+ France
+ Brazil
+ UK
+ Germany
+ Denmark
+ Canada
+ Finland
+(12 rows)
+
+
+postgres=# select * from customer where first_name like 'Jo%';
+ id | first_name |  last_name   |    city     | country |     phone
+----+------------+--------------+-------------+---------+----------------
+ 30 | JosΘ       | Pedro Freyre | Sevilla     | Spain   | (95) 555 82 82
+ 43 | John       | Steel        | Walla Walla | USA     | (509) 555-7969
+ 70 | Jonas      | Bergulfsen   | Stavern     | Norway  | 07-98 92 35
+ 71 | Jose       | Pavarotti    | Boise       | USA     | (208) 555-8097
+(4 rows)
+
+
+postgres=# select * from customer where first_name like 'a% _____';
+ id | first_name | last_name | city | country | phone
+----+------------+-----------+------+---------+-------
+(0 rows)
+
+
+postgres=# select * from customer where first_name like '%a ______';
+ id | first_name | last_name | city | country | phone
+----+------------+-----------+------+---------+-------
+(0 rows)
+
+
+postgres=# select country,count(country) from customer gruop by country;
+ERROR:  syntax error at or near "by"
+LINE 1: select country,count(country) from customer gruop by country...
+                                                          ^
+postgres=# select country,count(country) from customer group by country;
+   country   | count
+-------------+-------
+ Argentina   |     3
+ Spain       |     5
+ Switzerland |     2
+ Italy       |     3
+ Venezuela   |     4
+ Belgium     |     2
+ Norway      |     1
+ Sweden      |     2
+ USA         |    13
+ France      |    11
+ Mexico      |     5
+ Brazil      |     9
+ Austria     |     2
+ Poland      |     1
+ UK          |     7
+ Ireland     |     1
+ Germany     |    11
+ Denmark     |     2
+ Canada      |     3
+ Finland     |     2
+ Portugal    |     2
+(21 rows)
+
+
+postgres=# select country,count(country) from customer order by country decs;
+ERROR:  syntax error at or near "decs"
+LINE 1: ... country,count(country) from customer order by country decs;
+                                                                  ^
+postgres=# select country,count(country) from customer group by country order by country decs;
+ERROR:  syntax error at or near "decs"
+LINE 1: ...untry) from customer group by country order by country decs;
+                                                                  ^
+postgres=# select country, count(country)from customer group by country order by country desc ;
+   country   | count
+-------------+-------
+ Venezuela   |     4
+ USA         |    13
+ UK          |     7
+ Switzerland |     2
+ Sweden      |     2
+ Spain       |     5
+ Portugal    |     2
+ Poland      |     1
+ Norway      |     1
+ Mexico      |     5
+ Italy       |     3
+ Ireland     |     1
+ Germany     |    11
+ France      |    11
+ Finland     |     2
+ Denmark     |     2
+ Canada      |     3
+ Brazil      |     9
+ Belgium     |     2
+ Austria     |     2
+ Argentina   |     3
+(21 rows)
+
+
+postgres=# select sum(total_amount),count(total_amount)from orders where total_amount>20;
+    sum     | count
+------------+-------
+ 1354427.69 |   828
+(1 row)
+
+
+postgres=# select city,count(city) from customer group by city;
+      city       | count
+-----------------+-------
+ Butte           |     1
+ Paris           |     2
+ Cowes           |     1
+ Cork            |     1
+ Bern            |     1
+ Brandenburg     |     1
+ Aachen          |     1
+ Walla Walla     |     1
+ Warszawa        |     1
+ Mⁿnster         |     1
+ San Francisco   |     1
+ Eugene          |     1
+ Caracas         |     1
+ Berlin          |     1
+ Lyon            |     1
+ Lille           |     1
+ Salzburg        |     1
+ Elgin           |     1
+ Frankfurt a.M.  |     1
+ Stuttgart       |     1
+ Portland        |     2
+ ┼rhus           |     1
+ Bruxelles       |     1
+ Barcelona       |     1
+ Leipzig         |     1
+ Reims           |     1
+ Oulu
